@@ -329,15 +329,139 @@
 // const fifth = { ...first, propB: 20, ...second };
 // console.log(fifth); // { propA: 5, propB: 20, propC: 15 }
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
-  const { category, priority, completed } = data;
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект
+// со следующими свойствами.
 
-  console.log(data);
-  // Change code above this line
-}
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи,
+//   не изменяя напрямую параметр data.В новом объекте должно быть свойство completed,
+//     значение которого хранится в одноимённой локальной переменной.
 
-makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
+// В параметре data гарантированно будет только свойство text,
+//   а остальные два, category и priority, могут отсутствовать.Тогда,
+//   в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию,
+//     хранящиеся в одноимённых локальных переменных.
+
+// function makeTask({category = 'General', priority = 'Normal', text})
+// {
+//   // Change code below this line
+//   const newData =
+//   {
+//     category: category,
+//     priority: priority,
+//     text: text,
+//     completed: false,
+//   };
+//   return newData;
+//   // Change code above this line
+// }
+
+// makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
+
+// Операция rest для сбора всех аргументов функции.
+
+// function multiply(...args) {
+//   console.log(args); // массив всех аргументов
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// Change code below this line
+
+// function add(...args) {
+//   let totalArgs = 0;
+//   for (const arg of args) {
+//     totalArgs += arg;
+//     console.log(totalArgs);
+//   }
+//   return totalArgs;
+//   // Change code above this line
+// }
+// add(15, 27);
+// add(12, 4, 11, 48);
+// add(32, 6, 13, 19, 8);
+
+// Операция rest для сбора части аргументов функции
+
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//       console.log(total);
+//     }
+//   }
+//   return total;
+//   // Change code above this line
+// }
+// addOverNum(50, 15, 27);
+// addOverNum(10, 12, 4, 11, 48, 10, 8);
+
+// -----------------------------------
+
+// const minInArray = function (array) {
+//   let min = array[0];
+//   for (let i = 1; i < array.length; i++) {
+//     if (min > array[i]) {
+//       min = array[i];
+//     }
+//   }
+//   return min;
+// };
+
+// --------------------------------------
+
+// const min = function (a, b) {
+//   if (a > b) {
+//     return b;
+//   }
+//   return a;
+// };
+
+// ---------------------------------------
+
+// // Change code below this line
+// function findMatches(array, ...args) {
+//   console.log("array: ", array);
+//   console.log("args: ", args);
+//   const matches = []; // Don't change this line
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       matches.push(element);
+//       console.log(`${element} есть везде!`);
+//       console.log(matches);
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+// // findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+// // findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41);
+
+// --------------------------------------------------------
+// Методы объекта
+
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return `Deleting book ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+
+//   // Change code above this line
+// };
