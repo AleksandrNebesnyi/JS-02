@@ -312,3 +312,32 @@
 // const currentWeekTemps = [23, 17, 18];
 // const allTemps = [...lastWeekTemps, ...currentWeekTemps];
 // console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+// Операция spread при создании нового объекта
+// Во время распыления можно добавлять свойства в произвольное место.Глав
+// помнить про уникальность имени свойства и о том, что его значение может быть перезаписано.
+
+// const first = { propA: 5, propB: 10, propC: 50 };
+// const second = { propC: 15 };
+
+// const third = { propB: 20, ...first, ...second };
+// console.log(third); // { propA: 5, propB: 10, propC: 15 }
+
+// const fourth = { ...first, ...second, propB: 20 };
+// console.log(fourth); // { propA: 5, propB: 20, propC: 15 }
+
+// const fifth = { ...first, propB: 20, ...second };
+// console.log(fifth); // { propA: 5, propB: 20, propC: 15 }
+
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+  const { category, priority, completed } = data;
+
+  console.log(data);
+  // Change code above this line
+}
+
+makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
