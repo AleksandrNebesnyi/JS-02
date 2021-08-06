@@ -465,3 +465,147 @@
 
 //   // Change code above this line
 // };
+
+// --------------------------------------------------------
+// Доступ к свойствам объекта в его методах
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const nameIndex = this.books.indexOf(oldName);
+//     if (nameIndex < 0) {
+//       console.log(`${name} does not exist`);
+//       return;
+//     }
+//     newName !== null
+//       ? this.books.splice(nameIndex, 1, newName)
+//       : this.books.splice(nameIndex, 1);
+
+//     console.log(this.books);
+
+//     // Change code above this line
+//   },
+// };
+// bookShelf.updateBook("Haze", "Dungeon chronicles");
+
+// const atTheOldToad = {
+//   potions: [],
+
+//   getPotion() {
+//     return this.potions;
+//   },
+//   add(product) {
+//     for (const potion of this.potions) {
+//       if (potion.name === product.name) {
+//         item.quantity += 1;
+//         return;
+//       }
+//     }
+
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
+
+//     this.items.push(newProduct);
+//   },
+//   remove(productName) {
+//     const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       const item = items[i];
+
+//       if (productName === item.name) {
+//         console.log("нашли такой продукт ", productName);
+//         console.log("индекс: ", i);
+
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   //   const addPotion = name => {
+//   //   if ( potion.includes(name)) {
+//   //     console.log(`${name} exists`);
+//   //     return;
+//   //   }
+
+//   //   this.potion.push(name);
+//   //   this.potion.log(courses);
+//   // },
+
+//   //   const updatePotion = (name, newName) => {
+//   //   const nameIndex = this.potion.indexOf(name);
+//   //   if (nameIndex < 0) {
+//   //     console.log(`${name} does not exist`);
+//   //     return;
+//   //   }
+
+//   //   newName !== null
+//   //     ? this.potion.splice(nameIndex, 1, newName)
+//   //     : this.potion.splice(nameIndex, 1);
+
+//   //      this.potion.log(potion);
+//   // },
+
+//   // const removePotion = name => updatePotion(name, null),
+
+//   // Change code below this line
+//   // Change code above this line
+// };
+
+// atTheOldToad.add({ name: "1", price: 50 });
+// atTheOldToad.add({ name: "2", price: 60 });
+// atTheOldToad.add({ name: "3", price: 60 });
+// atTheOldToad.add({ name: "4", price: 60 });
+
+// console.log(atTheOldToa.potions);
+
+// const atTheOldToad = {
+//   potions: [],
+
+//   addPotion(name) {
+//     if (this.positions.includes(name)) {
+//       console.log(`${name} exists`);
+//       return;
+//     }
+
+//     this.potions.push(name);
+//     console.log(this.potions);
+//   },
+
+//   updatePotion(name, newName) {
+//     const nameIndex = this.potions.indexOf(name);
+//     if (nameIndex < 0) {
+//       console.log(`${name} does not exist`);
+//       return;
+//     }
+
+//     newName !== null
+//       ? this.potions.splice(nameIndex, 1, newName)
+//       : this.potions.splice(nameIndex, 1);
+
+//     console.log(this.potions);
+//   },
+
+//   removePotion(name) {
+//     updateCourse(name, null);
+//   },
+// };
+
+// addPotion("Express");
+// addPotion("HTML");
+// removePotion("React");
+// updatePotion("Express", "NestJS");
+
+const atTheOldToad = {
+  potions: [],
+
+  // add(product) {
+  //   for (const item of this.items) {
+  //     if (item.name === product.name) {
+  //       item.quantity += 1;
+  //       return;
+  //     }
+  //   }
+};
